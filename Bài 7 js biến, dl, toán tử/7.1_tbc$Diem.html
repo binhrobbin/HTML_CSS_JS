@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính điểm</title>
+</head>
+<body>
+<h1>Mời bạn nhập điểm 3 môn lý hóa sinh</h1>
+Vật lý:
+<input type="number" value="number" placeholder="Điểm vật lý" id="vl">
+<input type="number" placeholder="Điểm hóa học" id="hh">
+<input type="number" placeholder="Điểm sinh học" id="sh"><br>
+<button onclick="TongDiem()">Tổng</button>
+<button onclick="TBC()">Trung bình cộng</button>
+<p id="result"></p>
+</body>
+</html>
+<script>
+    function TongDiem(){
+        let inputvl = document.getElementById('vl').value;
+
+        let vl = parseFloat(inputvl);
+        alert(typeof (vl));
+        let inputhh = document.getElementById('hh').value;
+        let hh = parseFloat(inputhh);
+        let inputsh = document.getElementById('sh').value;
+        let sh= parseFloat(inputsh);
+        let tong = vl+hh+sh;
+        // document.write('Tổng của 3 môn là: '+ tong); đang ở trong hàm nó sẽ ko chạy html
+        document.getElementById("result").innerHTML = "Tổng: " + tong;
+    }
+        // document.write('Tổng của 3 môn là: '+ tong); ko dùng được vì ngoài hàm
+    function TBC(){
+        let inputvl = document.getElementById('vl').value;
+
+        let vl = parseFloat(inputvl);
+        alert(typeof (vl));
+        let inputhh = document.getElementById('hh').value;
+        let hh = parseFloat(inputhh);
+        let inputsh = document.getElementById('sh').value;
+        let sh= parseFloat(inputsh);
+        let tong = vl+hh+sh;
+        let tb = tong/3;
+        // document.write('Tổng của 3 môn là: '+ tong);
+        document.getElementById("result").innerHTML = "tbc: " + tb;
+    }
+
+    // let inputvl = prompt("nhập điểm môn vật lý: ");
+    // let vl = parseFloat(inputvl);
+    // alert(typeof (vl));
+    // let inputhh = prompt("nhập điểm môn hóa học: ");
+    // let hh = parseFloat(inputhh);
+    // let inputsh = prompt("nhập điểm môn sinh học: ");
+    // let sh= parseFloat(inputsh);
+    //
+    // let tong = vl+hh+sh;
+    // let tb = tong/3;
+    // document.write('Tổng của 3 môn là: '+ tong);
+    // document.write('<br>');
+    // document.write('tb của 3 môn là: '+ tb);
+</script>

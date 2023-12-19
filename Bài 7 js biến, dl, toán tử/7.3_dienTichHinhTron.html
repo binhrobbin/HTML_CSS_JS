@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1> Tính Diện tích hình tròn</h1>
+<input type="number" placeholder="viết bán kính" id="1">
+<button onclick="tinhkq()">Tính</button>
+<H1 id="2"></H1>
+</body>
+</html>
+<script>
+    function tinhkq(){
+        const pi = 3.14;
+        let ipbc = document.getElementById('1').value
+        let bc = parseFloat(ipbc);
+        let dt = bc * bc * pi;
+        document.getElementById('2').innerHTML = 'diện tíc: ' + dt;
+    }
+
+    // const pi = 3.14;
+    // let inputbc = prompt('mời bạn nhập bán kình hình tròn:')
+    // // alert(typeof (inputbc));
+    // let bc = parseFloat(inputbc);
+    // alert(typeof (bc));
+    // let dt = bc * bc * pi;
+    // alert('diện tích là:'+dt);
+    // document.write('diện tích document:'+ dt);
+</script>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="1" placeholder="nhap so nguyen a"><br>
+<input id="2" placeholder="nhap so nguyen b"><br>
+<input id="3" placeholder="nhap so nguyen c"><br>
+<button onclick="kiemtra()">Check</button>
+</body>
+</html>
+<script>
+    function kiemtra(){
+        let a = document.getElementById('1').value;
+        let b = document.getElementById('2').value;
+        let c = document.getElementById('3').value;
+        if (a > b){
+            if (a>c) alert('a là số lớn nhất');
+            else alert('c là số lớn nhất');}
+        else if (b>c) alert('b là số lớn nhất');
+            else alert('c là số lớn nhất');
+    }
+</script>

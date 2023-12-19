@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="1" placeholder="Nhập doanh số bán hàng trong 1 tháng (đơn vị: USD) 0-10000" size="60">
+<button onclick="kiemtra()">Check</button>
+</body>
+</html>
+<script>
+    function kiemtra(){
+        let a = document.getElementById('1').value;
+        if (a >= 8000)
+            alert('Hoa hồng bạn nhận được 30% là: ' + a*30/100);
+        else if (a >= 5000)
+            alert('Hoa hồng bạn nhận được 20% là: ' + a*20/100);
+        else if (a >= 3000)
+            alert('Hoa hồng bạn nhận được 10% là: ' + a*10/100);
+        else if (a >= 1000)
+            alert('Hoa hồng bạn nhận được 5%  là: ' + a*5/100);
+        else
+            alert('Bạn không đủ điều kiện được thưởng hoa hồng');
+    }
+</script>

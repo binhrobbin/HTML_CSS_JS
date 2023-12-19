@@ -41,36 +41,38 @@
 Please take a few moments to complete this satisfaction survey.
 <hr color="whitesmoke">
 <b>what is your age range?</b><br>
-<select>
+<select id="1">
     <option>18-24</option>
     <option>25-30</option>
     <option>31-50</option>
     <option>51-100</option>
 </select><br><br>
 <b>what is your yearly income range?</b><br>
-<select>
+<select id="2">
     <option>$0-25,000</option>
     <option>$25,000-$50,000</option>
     <option>$50,000-$100,000</option>
     <option>$100,000-$200,000</option>
     <option>$200,000+</option>
-</select><br><br>
+</select ><br><br>
 <b>Gender</b><br>
-<input  type="radio" name="nam"> Male <br>
-<input  type="radio" name="nu"> Male <br><br>
+<input  type="radio" name="gd" id="nam"> Male <br>
+<input  type="radio" name="gd" id="nu"> Female<br>
+<input  type="radio" name="gd" id="Ot"> Other<br>
+ <input  type="text" name="g" id="ip"> <br><br>
 <b>which of the following products have your purchased in the last 2 months. Please check all that apply.</b><br>
-<input  type="checkbox" name="1"> Product 1 <br>
-<input  type="checkbox" name="2"> Product 2 <br>
-<input  type="checkbox" name="3"> Product 3 <br><br>
+<input  type="checkbox" name="1" id="c1"> Product 1 <br>
+<input  type="checkbox" name="1" id="c2"> Product 2 <br>
+<input  type="checkbox" name="1" id="c3"> Product 3 <br><br>
 <b>How often would you use our product?</b><br>
-<input  type="radio" name="day"> Daily <br>
-<input  type="radio" name="week"> weekly <br>
-<input  type="radio" name="month"> Monthly <br><br>
+<input  type="radio" name="s" id="b1"> Daily <br>
+<input  type="radio" name="s" id="b2"> weekly <br>
+<input  type="radio" name="s" id="b3"> Monthly <br><br>
 <b>What would you pay for the new product?</b><br>
-$<input  type="tel" size="10">.<input  type="text" maxlength="2" size="2"> <br>
+$<input  type="tel" size="10" id="dola">.<input  type="text" maxlength="2" size="2" id="dola2"> <br>
  &nbsp; Dollars&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Cents<br><br>
 <b>What futures would you like to see in the new product.</b><br>
-<textarea rows="10" cols="100"></textarea><br><br>
+<textarea rows="10" cols="100" id="vanban"></textarea><br><br>
 Please rate your leve of agreement with the following statements.
 <table>
     <tr>
@@ -82,27 +84,28 @@ Please rate your leve of agreement with the following statements.
     </tr>
     <tr>
         <th>Our products are priced fairly.</th>
-        <td><input  type="radio"> <br>1</td>
-        <td><input  type="radio"> <br>2</td>
-        <td><input  type="radio"> <br>3</td>
-        <td><input  type="radio"> <br>4</td>
+        <td><input  type="radio" name="r" id="d1"> <br>1</td>
+        <td><input  type="radio" name="r" id="d2"> <br>2</td>
+        <td><input  type="radio" name="r" id="d3"> <br>3</td>
+        <td><input  type="radio" name="r" id="d4"> <br>4</td>
     </tr>
     <tr>
         <th>Our product are high quality.</th>
-        <td><input  type="radio"> <br>1</td>
-        <td><input  type="radio"> <br>2</td>
-        <td><input  type="radio"> <br>3</td>
-        <td><input  type="radio"> <br>4</td>
+        <td><input  type="radio" name="r2" id="e1"> <br>1</td>
+        <td><input  type="radio" name="r2" id="e2"> <br>2</td>
+        <td><input  type="radio" name="r2" id="e3"> <br>3</td>
+        <td><input  type="radio" name="r2" id="e4"> <br>4</td>
     </tr>
     <tr>
         <th>You would recommend our product to a friend or coworker.</th>
-        <td><input  type="radio"> <br>1</td>
-        <td><input  type="radio"> <br>2</td>
-        <td><input  type="radio"> <br>3</td>
-        <td><input  type="radio"> <br>4</td>
+        <td><input  type="radio" name="r3" id="f1"> <br>1</td>
+        <td><input  type="radio" name="r3" id="f2"> <br>2</td>
+        <td><input  type="radio" name="r3" id="f3"> <br>3</td>
+        <td><input  type="radio" name="r3" id="f4"> <br>4</td>
     </tr>
 </table><br><br>
-<input  type="submit" name="a" value="Submit"> <br>
+<input  type="button" onclick="laydl()" id="a" value="Submit"> <br>
 </form>
 </body>
 </html>
+<script src="5.7.js"></script>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="1" placeholder="Nhập số giờ bạn sử dụng điện thoại trong 1 hộ gia đình 0-..." size="60"><br>
+<button onclick="kiemtra()">Check</button><br><br>
+Mức sử dụng điện:<br>
+20 giờ đầu giá: 3000đ<br>
+20-40 giờ theo giá: 2500đ<br>
+40-60 giờ theo giá: 2000đ<br>
+60-80 giờ theo giá: 1500đ<br>
+Hơn 80 giờ theo giá: 1500đ<br>
+
+</body>
+</html>
+<script>
+    function kiemtra(){
+        let a = document.getElementById('1').value;
+        if (a >= 80)
+            alert('Số tiền bạn phải trả là: ' + (20*3000+20*2500+20*2000+20*1500+(a-80)*1000));
+        else if (a >= 60)
+            alert('Số tiền bạn phải trả là: ' + (20*3000+20*2500+20*2000+(a-60)*1500));
+        else if (a >= 40)
+            alert('Số tiền bạn phải trả là: ' + (20*3000+20*2500+(a-40)*2000));
+        else if (a >= 20)
+            alert('Số tiền bạn phải trả là: ' + (20*3000+(a-20)*2500));
+        else
+            alert('Số tiền bạn phải trả là: ' + (a*2500));
+    }
+</script>

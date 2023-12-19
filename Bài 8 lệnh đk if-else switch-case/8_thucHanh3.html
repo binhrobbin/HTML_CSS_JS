@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let nhapten = prompt("Mời nhập tên tài khoản: ");
+    if (nhapten == 'Admin') {
+        let matkhau = prompt("Mời nhập tên mật khẩu: ");
+        if (matkhau == 'TheMaster')
+            alert("Welcome");
+        else if (matkhau == null)
+            alert("Canceled");
+        else alert("Wrong password");
+    }
+    else if (nhapten == null)
+        alert("Canceled");
+        else alert("I don't know you");
+</script>

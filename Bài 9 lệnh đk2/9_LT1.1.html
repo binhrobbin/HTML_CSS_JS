@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="1" placeholder="nhap so a">
+<input id="2" placeholder="nhap so b">
+<button onclick="kiemtra()">Check</button>
+</body>
+</html>
+<script>
+    function kiemtra(){
+        let ipa = document.getElementById('1').value;
+        let ipb = document.getElementById('2').value;
+        if (ipa % ipb !== 0)
+            alert('a KHÔNG chia hết cho b');
+        else
+            alert('a CÓ chia hết cho b');
+    }
+</script>

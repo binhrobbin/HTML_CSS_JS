@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="1" placeholder="nhap mot so nguyen">
+<button onclick="kiemtra()">Check</button>
+</body>
+</html>
+<script>
+    function kiemtra(){
+        let a = document.getElementById('1').value;
+        if (a > 0)
+            alert(a + ' là số lớn hơn 0 ');
+        else if (a == 0)
+            alert(a + ' = 0 ');
+            else alert(a + ' là số nhỏ hơn 0 ');
+    }
+</script>

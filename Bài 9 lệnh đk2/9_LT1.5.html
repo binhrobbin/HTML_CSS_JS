@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="1" placeholder="nhập điểm học sinh">
+<button onclick="kiemtra()">Check</button>
+</body>
+</html>
+<script>
+    function kiemtra(){
+        let a = document.getElementById('1').value;
+        if (a >= 8)
+            alert('Bạn là học sinh giỏi ');
+        else if (a >= 7)
+            alert('Bạn là học sinh khá ');
+            else if (a >= 5)
+                alert('Bạn là học sinh trung bình ');
+                else
+                alert('Bạn là học sinh kém ');
+    }
+</script>

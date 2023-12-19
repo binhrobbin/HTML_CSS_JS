@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        div{
+             text-align: center;
+         }
+        table{
+            text-align: center;
+            margin: auto;
+        }
+        button{
+            width: 50px;
+            height: 30px;
+        }
+        p{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<h1>Máy tính đơn giản</h1>
+<form>
+    <div>
+        <textarea rows="3" cols="30" id="manhinh" ></textarea><br>
+<!--    <input type="text" id="manhinh2" value="">-->
+        <input type="reset" id="r" value="Reset" onmouseout="nutReset()">
+        <input type="button" onclick="nutam()" id="am" value="(-)">
+        <input type="button" onclick="xoa1()" id="xoa" value="&#8678;">
+
+    </div>
+<table>
+    <tr>
+        <td><button type="button" onclick="nut7()" id="7" value="">7</button> </td>
+        <td><button type="button" onclick="nut8()" id="8">8</button> </td>
+        <td><button type="button" onclick="nut9()" id="9">9</button> </td>
+        <td><button type="button" onclick="nutcong()" id="+">+</button> </td>
+
+    </tr>
+    <tr>
+        <td><button type="button" onclick="nut4()" id="4">4</button> </td>
+        <td><button type="button" onclick="nut5()" id="5">5</button> </td>
+        <td><button type="button" onclick="nut6()" id="6">6</button> </td>
+        <td><button type="button" onclick="nuttru()" id="-">-</button> </td>
+    </tr>
+    <tr>
+        <td><button type="button" onclick="nut1()" id="1">1</button> </td>
+        <td><button type="button" onclick="nut2()" id="2">2</button> </td>
+        <td><button type="button" onclick="nut3()" id="3">3</button> </td>
+        <td><button type="button" onclick="nutnhan()" id="x">x</button> </td>
+    </tr>
+    <tr>
+        <td><button type="button" onclick="nut0()" id="0">0</button> </td>
+        <td><button type="button" onclick="nutcham()" id=".">.</button> </td>
+        <td><button type="button" onclick="nutbang()" onmouseout="rachuot()" id="=">=</button> </td>
+        <td><button type="button" onclick="nutchia()" id="/">/</button> </td>
+    </tr>
+</table>
+    <input type="image" id="temp1" value="">
+    <!--<button type="button" id="temp1" value=""></button>-->
+    <input type="image" id="temp2" value="">
+    <input type="image" id="temp3" value="">
+    <p id="temp4"></p>
+    <small><i><p id="kq"></p></i></small>
+</form>
+</body>
+</html>
+<script src="7.6.2_MayTinhDonGian.js"></script>
