@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<h1>Bài 8: Kiểm tra xem một số nhập vào có phải là tuổi của một người không. </h1>
+  <h1>Một số nguyên là tuổi của một người khi nhỏ 120 và lơn hơn 0.</h1>
+<input id="1" placeholder="nhập tuổi">
+<button onclick="kiemtra()">Tính</button>
+<p id="n">...</p>
+</body>
+</html>
+<script>
+  function kiemtra(){
+    let a = document.getElementById('1').value;
+    if (a > 0 && a <120)
+      document.getElementById('n').innerHTML =a+ " Là tuổi của một người";
+      else document.getElementById('n').innerHTML = "Tuổi bạn nhâp không phải tuổi của một người"
+  }
+</script>

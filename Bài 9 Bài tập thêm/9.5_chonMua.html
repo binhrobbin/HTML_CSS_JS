@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Nhập vào số tháng ÂM LỊCH và hiển thị xem tháng đó là mùa nào.</h1>
+<input id="1">
+<button id="2">Kiểm tra</button>
+<p id="n">...</p>
+</body>
+</html>
+<script>
+
+    let nut = document.getElementById('2')
+    function check(){
+        let thang = document.getElementById('1').value
+        switch (thang){
+            case '1':
+            case '2':
+            case '3':
+                document.getElementById('n').innerHTML = "mùa Xuân"
+                break;
+            case '4':
+            case '5':
+            case '6':
+                document.getElementById('n').innerHTML = "mùa Hạ"
+                break;
+            case '7':
+            case '8':
+            case '9':
+                document.getElementById('n').innerHTML = "mùa Thu"
+                break;
+            case '10':
+            case '11':
+            case '12':
+                document.getElementById('n').innerHTML = "mùa Đông"
+                break;
+            default: document.getElementById('n').innerHTML = "Nhập lại số tháng"
+        }
+    }
+    nut.addEventListener('click', check)
+</script>

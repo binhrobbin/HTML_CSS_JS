@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Tính chỉ số cân nặng</h1>
+Nhập cân nặng: (kg) <input id="1"><br><br>
+Nhập chiều cao: (m) <input id="2"><br><br>
+<button onclick="kiemtra()">Kiểm tra</button>
+<p id="n"></p>
+</body>
+</html>
+<script>
+    // let nang = document.getElementById('1').value;
+    // let cao = document.getElementById('2').value;
+
+    function kiemtra() {
+        let nang = document.getElementById('1').value;
+        let cao = document.getElementById('2').value;
+
+        let bmi = nang / (cao * cao);
+        alert(bmi)
+        if (bmi >= 30.0) document.getElementById('n').innerHTML = 'Béo phì'
+        else if (bmi >= 25.0) document.getElementById('n').innerHTML = 'Thừa cân'
+        else if (bmi >= 18.5) document.getElementById('n').innerHTML = 'Bình thường'
+        else document.getElementById('n').innerHTML = 'Gầy thiếu cân'
+    }
+</script>

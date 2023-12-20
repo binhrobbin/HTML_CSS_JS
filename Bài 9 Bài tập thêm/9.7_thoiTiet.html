@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Người dùng nhập vào nhiệt độ hiện tại để đánh giá thời tiết</h1>
+<input id="1">
+<button id="2">Kiểm tra</button>
+<p id="n">...</p>
+</body>
+</html>
+<script>
+
+    let nut = document.getElementById('2')
+    function check(){
+        let a = document.getElementById('1').value
+        if (a>35) document.getElementById('n').innerHTML = "Trời đang rất nóng"
+            else if (a>25) document.getElementById('n').innerHTML = "Trời đang ấm áp"
+                else if (a>15) document.getElementById('n').innerHTML = "Trời đang mát mẻ"
+                    else if (a>0) document.getElementById('n').innerHTML = "Trời đang rét cóong"
+
+            else document.getElementById('n').innerHTML = "Nhập lại số tháng"
+
+    }
+    nut.addEventListener('click', check)
+</script>

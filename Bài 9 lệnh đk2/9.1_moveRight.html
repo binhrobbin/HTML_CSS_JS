@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<img id="myImage" src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Football_%28soccer_ball%29.svg" width="30%">
+<p>Click vô nút để di chuyển quả bóng sang phải</p>
+<button type="button" onclick="bung()">Click me</button>
+</body>
+</html>
+<script>
+    let imgObject = null;
+    imgObject = document.getElementById('myImage');
+    function tukichhoat(){
+        imgObject = document.getElementById('myImage');
+        imgObject.style.position = 'relative';
+        // imgObject.style.left = '0px';
+        imgObject.style.right = '0px';
+    }
+    function bungbong(){
+        imgObject.style.left = parseInt(imgObject.style.left) + 30 + 'px';
+    }
+    function bung(){
+        imgObject.style.right = parseInt(imgObject.style.right) + -30 + 'px';
+    }
+    window.onload = tukichhoat;
+</script>

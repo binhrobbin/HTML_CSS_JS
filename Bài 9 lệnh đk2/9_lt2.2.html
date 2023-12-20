@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Chuyển từ Mét sang Feet</h1>
+<input id="1" placeholder="nhập mét">
+<button onclick="kiemtra()">Check</button>
+<p id="2">...</p>
+</body>
+</html>
+<script>
+    function kiemtra(){
+        let a = document.getElementById('1').value;
+        let b = a*3.2808;
+        document.getElementById('2').innerHTML = a + " mét = "+b + " feet"
+    }
+</script>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Bài 10: Viết chương trình tính giá điện.</h1>
+<input id="1" placeholder="Nhập số kwh đện bạn sử dụng" ><br>
+<button onclick="kiemtra()">Check</button><br><br>
+Mức giá tiền khi sử dụng điện:<br>
+20 số điện đầu giá: 3000đ<br>
+20-40 số tiếp theo giá: 2500đ<br>
+40-60 số tiếp theo giá: 2000đ<br>
+60-80 số tiếp theo giá: 1500đ<br>
+Hơn 80 số tiếp theo giá: 1000đ<br>
+
+</body>
+</html>
+<script>
+    function kiemtra(){
+        let a = document.getElementById('1').value;
+        if (a >= 80)
+            alert('Số tiền bạn phải trả là: ' + (20*3000+20*2500+20*2000+20*1500+(a-80)*1000));
+        else if (a >= 60)
+            alert('Số tiền bạn phải trả là: ' + (20*3000+20*2500+20*2000+(a-60)*1500));
+        else if (a >= 40)
+            alert('Số tiền bạn phải trả là: ' + (20*3000+20*2500+(a-40)*2000));
+        else if (a >= 20)
+            alert('Số tiền bạn phải trả là: ' + (20*3000+(a-20)*2500));
+        else
+            alert('Số tiền bạn phải trả là: ' + (a*2500));
+    }
+</script>

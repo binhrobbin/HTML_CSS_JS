@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Phân loại mức thưởng theo chi tiêu </h1>
+Mốc 0-500000 vnd : Sẽ được thưởng 0.5điểm/1đồng  <br>
+Mốc 500000-5000000 vnd : Sẽ được thưởng 0.7điểm/1đồng  <br>
+Mốc 5000000-50000000 vnd : Sẽ được thưởng 1điểm/1đồng  <br>
+Mốc Trên 50000000 vnd : Sẽ được thưởng 1.5điểm/1đồng  <br><br>
+<input id="1" placeholder="nhập số tiền đã tiêu">
+<button onclick="kiemtra()">Xét</button>
+<p id="n">...</p>
+</body>
+</html>
+<script>
+    function kiemtra(){
+        let a = document.getElementById('1').value;
+        if (a >= 50000000)
+            document.getElementById('n').innerHTML =" Điểm thưởng của bạn là: "
+                + (499999*0.5+4500000*0.7+45000000+((a-49999999)*1.5));
+        else if (a >= 5000000) document.getElementById('n').innerHTML =" Điểm thưởng của bạn là: "
+            + (499999*0.5+4500000*0.7+(a-4999999));
+        else if (a >= 500000) document.getElementById('n').innerHTML =" Điểm thưởng của bạn là: "
+            + (499999*0.5+(a-499999)*0.7);
+        else if (a > 0) document.getElementById('n').innerHTML =" Điểm thưởng của bạn là: "
+            + (a*0.5);
+            else document.getElementById('n').innerHTML = "Nhập lại tuổi";
+    }
+</script>

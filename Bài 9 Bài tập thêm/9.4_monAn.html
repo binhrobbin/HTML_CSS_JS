@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Mời bạn chọn loại món ăn </h1>
+
+<select id="1">
+    <option>Chay</option>
+    <option>Thịt</option>
+    <option>Hải sản</option>
+</select>
+<button id="2">Chọn</button>
+<p id="n">...</p>
+</body>
+</html>
+<script>
+    function kiemtra(){
+        let chon = document.getElementById('1').value;
+        switch (chon) {
+            case 'Chay':
+                document.getElementById('n').innerHTML = " Bạn có thể ăn các món sau: đậu, bắp cải, su hào, ...";
+                break;
+            case 'Thịt':
+                document.getElementById('n').innerHTML = " Bạn có thể ăn các món sau: cá, bò, lợn, gà, ...";
+                break;
+            case 'Hải sản':
+                document.getElementById('n').innerHTML = " Bạn có thể ăn các món sau: tôm, cua, mực, vi cá mập, ...";
+                break;
+        }
+    }
+    let goi = document.getElementById('2');
+    goi.addEventListener('click', kiemtra);
+</script>

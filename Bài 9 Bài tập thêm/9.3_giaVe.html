@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Bài 9: Phân loại giá vé theo tuổi </h1>
+Trẻ con: 0-17 : vé 80000 vnd <br>
+Trưởng thành: 18 - 50: vé 150000 vnd<br>
+Cao tuổi: 50 - 120: vé 120000 vnd<br>
+<input id="1" placeholder="nhập tuổi">
+<button onclick="kiemtra()">Xét</button>
+<p id="n">...</p>
+</body>
+</html>
+<script>
+    function kiemtra(){
+        let a = document.getElementById('1').value;
+        if (a > 0 && a <18)
+            document.getElementById('n').innerHTML =a+ " Trẻ con giá 1 vé: 80000 vnd";
+        else if (a >= 18 && a <50) document.getElementById('n').innerHTML = "Người trưởng thành giá 1 vé: 150000 vnd";
+        else if (a >= 50) document.getElementById('n').innerHTML = "Người cao tuổi giá 1 vé: 120000 vnd";
+            else document.getElementById('n').innerHTML = "Nhập lại tuổi";
+    }
+</script>

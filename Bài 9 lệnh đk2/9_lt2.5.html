@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Bài 5: Tính diện tích tam giác vuông khi biết 02 cạnh kề a, b.</h1>
+<input id="1" placeholder="nhập cạnh a">
+<input id="3" placeholder="nhập cạnh b">
+<button onclick="kiemtra()">Tính</button>
+<p id="2">...</p>
+</body>
+</html>
+<script>
+    function kiemtra(){
+        let a = document.getElementById('1').value;
+        let b = document.getElementById('3').value;
+        let c = a*b/2;
+        document.getElementById('2').innerHTML = "Diện tích tam giác vuông cạnh a: "+a+' và b: ' +b + " là: "+c;
+    }
+</script>

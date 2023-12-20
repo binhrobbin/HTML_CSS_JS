@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        td,th{
+            border: 1px solid black;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+<h1>Bài 11: Viết chương trình tính thuế thu nhập cá nhân.</h1>
+Nhập số tiền thu nhập cá nhân hàng tháng của bạn đơn vị triệu đồng:<br>
+<input id="1"  ><br>
+<button onclick="kiemtra()">Check</button><br><br>
+<p id="n">...</p>
+Bảng mức thuế thu nhập cá nhân:<br>
+<table>
+    <tr>
+        <th>Bậc</th>
+        <th>Thu nhập tháng</th>
+        <th>Số thuế phải nộp</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>TN <= 5tr</td>
+        <td>TN x 5%</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>5tr < TN <= 10tr</td>
+        <td>TN x 10% - 0.25tr</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>10tr < TN <= 18tr</td>
+        <td>TN x 15% - 0.75tr</td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>18tr < TN <= 32tr</td>
+        <td>TN x 20% - 1.65tr</td>
+    </tr>
+    <tr>
+        <td>5</td>
+        <td>32tr < TN <= 52tr</td>
+        <td>TN x 25% - 3.25tr</td>
+    </tr>
+    <tr>
+        <td>6</td>
+        <td>52tr < TN <= 80tr</td>
+        <td>TN x 30% - 5.85tr</td>
+    </tr>
+    <tr>
+        <td>7</td>
+        <td>TN > 80tr</td>
+        <td>TN x 35% - 9.85tr</td>
+    </tr>
+</table>
+</body>
+</html>
+<script>
+    function kiemtra(){
+        let a = document.getElementById('1').value;
+        if (a <= 5000000)
+            document.getElementById('n').innerHTML = " Số thuế bạn phải trả là: "+(a*5/100) +"vnd";
+        else if (a <= 10000000)
+            document.getElementById('n').innerHTML = " Số thuế bạn phải trả là: "+(a*10/100 -250000) +"vnd";
+        else if (a <= 18000000)
+            document.getElementById('n').innerHTML = " Số thuế bạn phải trả là: "+(a*15/100 -750000)+"vnd";
+        else if (a <= 32000000)
+            document.getElementById('n').innerHTML = " Số thuế bạn phải trả là: "+(a*20/100 -1650000)+"vnd";
+        else if (a <= 52000000)
+            document.getElementById('n').innerHTML = " Số thuế bạn phải trả là: "+(a*25/100 -3250000)+"vnd";
+        else if (a <= 80000000)
+            document.getElementById('n').innerHTML = " Số thuế bạn phải trả là: "+(a*30/100 -5850000)+"vnd";
+        else
+            document.getElementById('n').innerHTML = " Số thuế bạn phải trả là: "+(a*35/100 -9850000)+"vnd";
+    }
+</script>

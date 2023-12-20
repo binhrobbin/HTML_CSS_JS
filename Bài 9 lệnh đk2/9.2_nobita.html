@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body onload="luonchay()">
+<img id="nobita" src="https://upload.wikimedia.org/wikipedia/vi/2/2c/Nobita.png" style="position: relative;left: 0;top: 0;" border="1">
+</body>
+</html>
+<script>
+    function upPressed(){
+        let theImg = document.getElementById('nobita');
+        theImg.style.top = parseInt(theImg.style.top) - 10 + 'px';
+    }
+    function downPressed(){
+        let theImg = document.getElementById('nobita');
+        theImg.style.top = parseInt(theImg.style.top) + 10 + 'px';
+    }
+    function leftPressed(){
+        let theImg = document.getElementById('nobita');
+        theImg.style.left = parseInt(theImg.style.left) - 10 + 'px';
+    }
+    function rightPressed(){
+        let theImg = document.getElementById('nobita');
+        theImg.style.left = parseInt(theImg.style.left) + 10 + 'px';
+    }
+    function luaChonDiChuyen(evt){
+        switch (evt.keyCode) {
+            case 37:
+                leftPressed();
+                break;
+            case 38:
+                upPressed();
+                break;
+            case 39:
+                rightPressed();
+                break;
+            case 40:
+                downPressed();
+                break;
+
+        }
+    }
+    function luonchay(){
+        window.addEventListener("keydown", luaChonDiChuyen);
+    }
+
+</script>

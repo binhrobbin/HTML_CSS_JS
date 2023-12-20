@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<h1>Tính diện tích hình vuông khi biết cạnh a.</h1>
+<input id="1" placeholder="nhập cạnh a">
+<button onclick="kiemtra()">Tính</button>
+<p id="2">...</p>
+</body>
+</html>
+<script>
+  function kiemtra(){
+    let a = document.getElementById('1').value;
+    let b = a*a;
+    document.getElementById('2').innerHTML = "Diện tích hình vuông cạnh "+a + " là: "+b;
+  }
+</script>
