@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Game đoán số trong khoảng tùy chọn nhập</h1>
+<button onclick="chon()">Chơi or chơi lại</button>
+</body>
+</html>
+<script>
+  function chon(){
+    count= 0
+   let nho = parseInt(prompt('nhập số nhỏ nhất'));
+    let to = parseInt(prompt('nhập số lớn nhất'));
+    let a = Math.floor(Math.random()*(to-nho+1) +nho);
+    let doan = prompt('Mời bạn nhập số muốn đoán');
+  for (i=1; i<3;i++){
+    if (doan == a){
+      alert('Congratulation! Bạn đã đoán đúng số tôi ra')
+      break;
+    }
+    else {
+      if (doan < a) doan= prompt('Số bạn đoán bé hơn rồi, mời đoán lại nè:');
+      else doan= prompt('Số bạn đoán lớn hơn rồi, mời đoán lại nè:');
+      count +=1
+    }
+  }
+  if (count == 2)
+    alert('Bạn đã đoán sai 3 lần rồi, hết lượt. Nhấn nút để chơi lại: \n' + a +' mới đúng hehe');
+  }
+</script>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            font-size: xxx-large;
+            text-align: center;
+        }
+
+        input {
+
+        }
+    </style>
+</head>
+<body>
+<h1></h1>
+<input type="checkbox" id="1" onclick="an1()"> Tiền tài <br>
+<input type="checkbox" id="2" onclick="an2()"> Sức khỏe <br>
+<input type="checkbox" id="3" onclick="an3()"> Tình Yêu <br>
+</body>
+</html>
+<script>
+    let nut1 = document.getElementById('1');
+    let nut2 = document.getElementById('2');
+    let nut3 = document.getElementById('3');
+    alert(Math.floor(Math.random() * 3))
+
+    function an1() {
+        if (nut1.checked == true) {
+            if (nut2.checked == true)
+                nut3.checked = false;
+            else if (nut3.checked == false) {
+                if ((parseInt(Math.random() * 2 + 1)) == 1)
+                    nut3.checked = true;
+                else nut2.checked = true;
+            } else nut2.checked = false;
+        } else {
+            nut2.checked = true;
+            nut3.checked = true;
+        }
+    }
+    function an2() {
+        if (nut2.checked == true) {
+            if (nut3.checked == true)
+                nut1.checked = false;
+            else if (nut1.checked == false) {
+                if ((parseInt(Math.random() * 2 + 1)) == 1)
+                    nut1.checked = true;
+                else nut3.checked = true;
+            } else nut3.checked = false;
+        } else {
+            nut3.checked = true;
+            nut1.checked = true;
+        }
+    }
+    function an3() {
+        if (nut3.checked == true) {
+            if (nut1.checked == true)
+                nut2.checked = false;
+            else if (nut2.checked == false) {
+                if ((parseInt(Math.random() * 2 + 1)) == 1)
+                    nut2.checked = true;
+                else nut1.checked = true;
+            } else nut1.checked = false;
+        } else {
+            nut1.checked = true;
+            nut2.checked = true;
+        }
+    }
+</script>

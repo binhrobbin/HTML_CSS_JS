@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Khoảng cách:<input id="1" placeholder="km" ><br>
+Khoảng lượng:<input id="2" placeholder="kg"><br>
+Tốc độ:
+<select id="3">
+    <option>tiêu chuẩn</option>
+    <option>nhanh</option>
+    <option>hỏa tốc</option>
+</select><br><br>
+<button onclick="check()">Tính phí</button><br><br>
+<p id="kq">...</p>
+</body>
+</html>
+<script>
+
+    function check(){
+        let a1 = document.getElementById('1').value;
+        let a2 = document.getElementById('2').value;
+        let a3 = document.getElementById('3');
+        if (a3.value == 'tiêu chuẩn')
+            document.getElementById('kq').innerHTML ='Phí là: ' +(a1*15000 + a2*1000);
+        if (a3.value == 'nhanh')
+            document.getElementById('kq').innerHTML ='Phí là: ' +(a1*15000*1.5 + a2*1000);
+        if (a3.value == 'hỏa tốc')
+            document.getElementById('kq').innerHTML ='Phí là: ' +(a1*15000*1.7 + a2*1000);
+    }
+</script>

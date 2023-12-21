@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<img id="img" style="width: 350px;height: 500px;position: absolute; left: 500px; top: 0px" src="https://genk.mediacdn.vn/2019/11/16/photo-1-1573918329556449244986.jpg">
+<br><br>
+<!--<button id="trai" onclick="trai()">Trái</button>-->
+<!--<button id="phai" onclick="phai()">Phải</button>-->
+<!--<button id="tren" onclick="tren()">Trên</button>-->
+<!--<button id="duoi" onclick="duoi()">Dưới</button>-->
+</body>
+</html>
+<script>
+    let img = document.getElementById('img')
+    // function trai(){
+    //     img.style.left = parseInt(img.style.left) - 10 + 'px';
+    // }
+    // function phai(){
+    //     img.style.left = parseInt(img.style.left) + 10 + 'px';
+    // }
+    // function tren(){
+    //     img.style.top = parseInt(img.style.top) - 10 + 'px';
+    // }
+    // function duoi(){
+    //     img.style.top = parseInt(img.style.top) + 10 + 'px';
+    // }
+    function dichuyenanh (evt){
+        switch (evt.keyCode){
+            case 37:
+                img.style.left = parseInt(img.style.left) - 30 + 'px';
+                break;
+            case 38:
+                img.style.top = parseInt(img.style.top) - 30 + 'px';
+                break;
+            case 39:
+                img.style.left = parseInt(img.style.left) + 30 + 'px';
+                break;
+            case 40:
+                img.style.top = parseInt(img.style.top) + 30 + 'px';
+                break;
+        }
+    }
+    window.addEventListener('keydown', dichuyenanh);
+</script>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<img id="img" src="https://genk.mediacdn.vn/2019/11/16/photo-1-1573918329556449244986.jpg">
+<br><br>
+
+</body>
+</html>
+<script>
+    let count = 1;
+    let img1 = "https://genk.mediacdn.vn/2019/11/16/photo-1-1573918329556449244986.jpg";
+    let img2 = "https://genk.mediacdn.vn/2019/11/16/photo-1-157391848492999759146.jpg";
+    let img3 = "https://cdn.diemnhangroup.com/seoulcenter/2022/11/gai-xinh-1.jpg";
+    let img4 = "https://lzd-img-global.slatic.net/g/p/03bcc0e6db08614ea357ea3aa1797a9f.jpg_720x720q80.jpg";
+    let img0 = document.getElementById('img');
+
+    function doianh() {
+
+    switch (count) {
+        case 1:
+            img0.src = img1;
+            count ++;
+            break;
+        case 2:
+            img0.src = img2;
+            count ++;
+            break;
+        case 3:
+            img0.src = img3;
+            count ++;
+            break;
+        case 4:
+            img0.src = img4;
+            count = 1;
+            break;
+    }
+}
+// img = document.getElementById('img');
+img0.addEventListener('click', doianh);
+
+</script>

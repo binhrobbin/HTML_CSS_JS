@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let nhap = prompt("Mời bạn nhập nhiệt độ")
+    for (;;){
+    // for (let i=0; i<1000;i++) {
+        if (nhap > 100) {
+            nhap = prompt("Hãy giảm nhiệt độ xuống")
+            // i++;
+        } else if (nhap < 20) {
+            nhap = prompt("Hãy tăng nhiệt độ lên")
+            // i++;
+        } else {
+            alert('Bạn nhập đúng rồi')
+            break;
+        }
+    }
+</script>
