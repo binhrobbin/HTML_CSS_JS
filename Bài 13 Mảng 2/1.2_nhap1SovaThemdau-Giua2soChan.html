@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+</body>
+</html>
+<script>
+let a =prompt('Nhập một dãy số: ');
+let str = [a[0]];
+// alert(typeof a)
+for (let i=1; i<a.length;i++) {
+    if (a[i-1] % 2 == 0 && a[i] % 2 == 0) {
+        str.push('-', a[i])
+    }
+    else str.push(a[i]);
+}
+document.write(str.join(''));
+</script>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let text = '';
+    let trong = '';
+let a = parseInt( prompt('Mời nhập chiều dài a của hcn'));
+let b = parseInt( prompt('Mời nhập chiều rộng b của hcn'));
+for (i=1; i<=b;i++){
+    if (i==1 || i==b) {
+        text = '';
+        for (j = 1; j <= a; j++) {
+            text += "*"
+        }
+        console.log(text)
+    }
+    else {
+        text = '';
+        trong = '';
+        for (j = 1; j <= a; j++) {
+            if (j == 1 || j == a)
+                trong += "*"
+            else trong += ' '
+        }
+        console.log(trong)
+    }
+}
+</script>

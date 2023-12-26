@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let array = [-3,5,1,3,2,10]
+    let i,j,temp;
+    j = array.length-1
+    for (i=0,j=5; i<j; i++,j--){
+        temp = array[i];
+        array[i] =  array[j];
+        array[j] = temp;
+
+    }
+    document.write(array);
+</script>

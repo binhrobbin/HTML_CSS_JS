@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Từ điển Anh Việt</h1>
+Nhập từ: <input id="nhap" placeholder="gõ chữ thường"><button onclick="tratu()">Dịch</button>
+<p id="n"></p>
+</body>
+</html>
+<script>
+    function tratu(){
+        let dem = 0;
+        let tu = document.getElementById('nhap').value;
+    let anh = ['apple','orange','banana','mango','lemon','berry','coconut','melon']
+    let viet = ['táo','cam','chuối','xoài','chanhvàng','dâu','dừa','dưa']
+    let arr =[];
+        for (let a in anh) {
+            if (tu === anh[a]){
+                arr.push(viet[a])
+                dem++;
+            }
+        }
+        if (dem === 0) document.getElementById('n').innerHTML = 'Không tìm thấy từ'
+        else document.getElementById('n').innerHTML = arr
+    }
+    // document.write(str+'<br>');
+    // document.write(arr.join(''));
+</script>

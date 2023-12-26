@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let mang = [3,67,4,3,5,6,66,5,2,5,25,2,5342,5,24,52,4,25,7,56,26];
+    let tong = 0;
+    document.write(mang+'<br>');
+    mang.sort(function (a,b){
+        return b-a;
+    })
+    document.write('số lớn nhất trong mảng là'+mang[0]+'<br>');
+    for (let a in mang){
+        tong += mang[a]
+    }
+    let tb = tong/mang.length;
+    document.write('Trugn bình là: '+Math.floor(tb))
+</script>

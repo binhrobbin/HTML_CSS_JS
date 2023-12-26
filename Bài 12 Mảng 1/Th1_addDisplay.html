@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="1">
+<button onclick="themMoi()">Add</button>
+<button onclick="hienThi()">Display</button>
+<hr width="15%" style="margin-left: 0">
+<div id="2"></div>
+</body>
+</html>
+<script>
+    // let array = [3,4]
+    // let i;
+    // function hienThi() {
+    //     for (i = 0; i < array.length; i++) {
+    //         // document.write('<p>'+"phần tử thứ " + i + " là: " + array[i] +'</p>'+ '<br>')
+    //         document.write("phần tử thứ " + i + " là: " + array[i] + '<br>')
+    //     }
+    // }
+    // function themMoi(){
+    //     let a =parseInt( document.getElementById('1').value);
+    //     // array.push(a)
+    //     array[array.length] = a;
+    //     alert(typeof (array[1]))
+    // }
+
+    let array = Array();
+    let x=0;
+    function themMoi() {
+        array[x] = document.getElementById('1').value;
+        alert("Element: " + array[x] + " Added at index " + x);
+        x++;
+    }
+    function hienThi(){
+        let e = '<hr>'
+        for (let i=0; i < array.length;i++){
+            e += ("phần tử thứ " + i + " là: " + array[i] + '<br>');
+        }
+        document.getElementById('2').innerHTML = e;
+    }
+</script>

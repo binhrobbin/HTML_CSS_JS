@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{ text-align: center;
+
+        }
+    </style>
+</head>
+<body>
+<div>
+<textarea id="1" cols="40" rows="10"></textarea>
+</div>
+</body>
+</html>
+<script>
+    let arr = 'Tôi tên là Bình!!';
+    let hien = ''
+    let i = 0;
+    function chaychu() {
+    if (i<arr.length){
+        hien += arr[i];
+        document.getElementById('1').value = hien
+        i++;
+    }
+    else {document.getElementById('1').value = ''
+        hien = '';
+        i=0;}
+    }
+
+    window.addEventListener("keydown", chaychu)
+</script>

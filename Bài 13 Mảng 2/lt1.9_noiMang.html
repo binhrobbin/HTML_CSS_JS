@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let a,i,b;
+    let arrA = [];
+    let arrB = [];
+    let arrC = [];
+    // document.write('là'+arrC+'<br>')
+    for (i=1; i<=10;i++){
+        a = parseInt(prompt('Nhập vào phần tử thứ '+i+' của mảng A'));
+        arrA.push(a);
+    }
+    document.write('Mảng A bạn đã nhập vào là: '+arrA+'<br>');
+    for (i=1; i<=10;i++){
+        b = parseInt(prompt('Nhập vào phần tử thứ '+i+' của mảng B'));
+        arrB.push(b);
+    }
+    document.write('Mảng B bạn đã nhập vào là: '+arrB+'<br>');
+    arrC = arrA.concat(arrB);
+    document.write('Mảng C sau khi nối là: '+arrC+'<br>');
+
+</script>

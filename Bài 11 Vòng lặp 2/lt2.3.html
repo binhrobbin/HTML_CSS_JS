@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>aaa</p>
+</body>
+</html>
+<script>
+    let text = '';
+    for (i = 1; i <= 5; i++) {
+        text += '*';
+        document.write(text + '<br>');
+    }
+    document.write('<br>');
+
+    text = '******';
+    // alert( text.length);
+    for (; i > 0; i--) {
+        text = text.slice(0,-1)
+        document.write(text + '<br>');
+    }
+
+    document.write('<br>');
+    let trong = '    ';
+    text = '*';
+    // console.log(text)
+    for (i = 1; i <= 5; i++) {
+        console.log(trong +text);
+        trong = trong.slice(0,-1);
+        text += '*';
+    }
+    console.log(trong);
+    trong = '';
+    text = '*****';
+    for (i = 1; i <= 5; i++) {
+        console.log(trong +text);
+        text = text.slice(0,-1);
+        trong += ' ';
+    }
+</script>

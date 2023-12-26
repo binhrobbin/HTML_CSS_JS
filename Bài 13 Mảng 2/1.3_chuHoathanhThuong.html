@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let hoa = ' ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    let thuong = ' abcdefghijklmnopqrstuvwxyz'
+    let arr =[];
+    let str = 'The Quick Brown Fox';
+    for (let a in str){
+        for (let i=0; i<hoa.length;i++) {
+            if (str[a] === hoa[i]){
+                arr.push(thuong[i])
+            }
+            else if (str[a] === thuong[i])
+                arr.push(hoa[i])
+        }
+    }
+    document.write(str+'<br>');
+    document.write(arr.join(''));
+</script>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let text = '';
+    let trong = '';
+    // let a = parseInt( prompt('Mời nhập chiều dài a của hcn'));
+    // let b = parseInt( prompt('Mời nhập chiều rộng b của hcn'));
+    trong = '   ';
+    text = '***';
+    for (i = 1; i <= 2; i++) {
+        let giua = (trong+trong).slice(0,-1);
+        console.log(trong +text+ giua+text+trong);
+        trong = trong.slice(0,-2);
+        text += '****';
+    }
+        trong = '';
+        text = '*****************';
+        for (i = 1; i <= 5; i++) {
+            console.log(trong +text+ trong);
+            text = text.slice(0,-4);
+            trong += '  ';
+        }
+
+</script>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let a,i,b;
+    let arr = [];
+
+    for (i=1; i<=10;i++){
+        a = parseInt(prompt('Nhập vào phần tử thứ '+i));
+        arr.push(a);
+    }
+    document.write('Mảng 10 phần tử bạn đã nhập vào là: '+arr+'<br>')
+    arr.sort(function (c,d){
+        return d-c;
+    })
+    document.write('Mảng sau khi sắp xếp giảm dần là: '+arr+'<br>')
+</script>
