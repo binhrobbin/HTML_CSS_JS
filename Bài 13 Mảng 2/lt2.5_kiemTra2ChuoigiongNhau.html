@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let count = 0;
+    let a = prompt('nhập vào chuỗi a');
+    let b = prompt('nhập vào chuỗi b');
+    document.write('Chuỗi a là: '+a+'<br>')
+    document.write('Chuỗi b là: '+b+'<br>')
+    if (a.length === b.length) {
+        for (let i = 0; i < a.length; i++) {
+            if (a[i] !== b[i])
+                count++;
+        }
+        if (count === 0) document.write('Chuỗi a giống chuỗi b')
+        else document.write('Chuỗi a khác chuỗi b')
+    }
+    else document.write('Chuỗi a khác chuỗi b')
+</script>

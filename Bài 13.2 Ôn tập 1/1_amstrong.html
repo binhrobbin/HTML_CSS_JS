@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+</body>
+</html>
+<script>
+    let tong = 0;
+    let ams;
+    let a = prompt('nhập 1 số dương bất kỳ');
+    for (let i=0; i<a.length;i++){
+        tong += Math.pow(parseInt(a[i]),a.length)
+    }
+    if (a == tong){
+        document.write(a+' là số amstrong')
+    }else document.write(a+' KO là số amstrong')
+</script>

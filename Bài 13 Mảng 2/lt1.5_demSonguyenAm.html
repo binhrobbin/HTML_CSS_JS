@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let chuoi= prompt('Mời bạn nhập chuỗi')
+    document.write(chuoi+'<br>')
+    let dem=0;
+    for (let i=0;i<chuoi.length;i++){
+        if (chuoi[i] === '-'){
+            // alert(chuoi[i+1])
+           let b = parseInt(chuoi[i+1]);
+            // alert(b)
+            // alert(isNaN(b))
+           if (!isNaN(b)){
+               dem++;
+           }
+        }
+    }
+    document.write('có '+dem+' số nguyên âm trong chuỗi'+'<br>')
+</script>

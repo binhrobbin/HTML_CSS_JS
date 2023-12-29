@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let a = [
+        [1, 'a', 'a', 24],
+        [8, 11, '', 4],
+        [7, 0, 7.5, 27],
+        [7, 4, 28, 14],
+        [3, 10, true, 7]
+    ];
+    let b= [];
+    let dem = 0;
+    let chuoi ='';
+    for (let i=0; i<a.length; i++){
+       b.push( a[i].join(''))
+    }
+    chuoi = b.join('')
+    document.write('mảng a là: '+a+'<br>')
+    console.log(a)
+    for (let i=0;i< chuoi.length; i++){
+        for (let j=0;j<=9;j++){
+            if (chuoi[i]==j){
+                dem++;
+            }
+        }
+    }
+    document.write('mảng a có '+dem+' ký tự số')
+
+    // for (let b in a){
+    //     for (let c in a[b]){
+    //         if (typeof a[b][c] === 'number' ){
+    //             dem++;
+    //         }
+    //     }
+    // }
+</script>

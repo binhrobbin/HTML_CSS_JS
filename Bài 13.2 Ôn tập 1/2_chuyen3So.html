@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="number">
+<button onclick="changeNumberToString()">change</button>
+</body>
+</html>
+<script>
+    function changeNumberToString() {
+        let chu = ['không','một', 'hai', 'ba', 'bốn', 'năm', 'sáu', 'bẩy', 'tám', 'chín']
+        let number = document.getElementById('number').value;
+        let str = '';
+        count = number.length;
+        if (count == 3) {
+            str += chu[number[number.length - count]] + ' trăm ';
+            count--;
+            // alert(str)
+        }
+        if (count == 2) {
+            if (number[number.length - count] === '1') str += 'mười '
+            else
+            str += chu[number[number.length - count]] + ' mươi '
+            count--;
+        }
+        if (count == 1) {
+            str += chu[number[number.length - count]];
+        }
+        alert(str);
+    }
+
+</script>

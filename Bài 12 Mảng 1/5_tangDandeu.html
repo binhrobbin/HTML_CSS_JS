@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let arr =[];
+    let dem =0;
+    let a =parseInt( prompt('nhập vào số phần tử i trong mảng '));
+    for (let i=0;i<a;i++){
+        arr[i] =parseInt(prompt('nhập số vào phần tử'))
+    }
+    document.write('mảng là '+arr+'<br>')
+    let b = arr[1]-arr[0]
+    if (a>2) {
+        for (let j = 0; j < a - 1; j++) {
+            if (!((arr[j] < arr[j + 1]) && (arr[j + 1] === arr[j]+b))) {
+                dem++;
+            }
+        }
+        if (dem === 0) document.write('là mảng tăng dần đều')
+        else document.write('KO là mảng tăng dần đều')
+    }
+    else document.write('KO là mảng tăng dần đều')
+</script>

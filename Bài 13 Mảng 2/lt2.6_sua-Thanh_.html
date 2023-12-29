@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let c;
+    let a =parseInt( prompt('nhập vào số phần tử i trong mảng 2 chiều'));
+    let b =parseInt( prompt('nhập vào số phần tử j trong mảng 2 chiều'));
+    let array = [];
+    for (let i=0; i<a;i++){
+        array[i] = new Array(b);
+        for (let j=0;j<b;j++){
+            array[i][j] = prompt('Mời nhập phần tử mảng KÝ TỰ array['+i+']['+j+']: ');
+        }
+    }
+    document.write('Mảng sau khi nhập là: '+array+'<br>');
+    console.log(array);
+    for (let i=0; i<a;i++){
+        for (let j=0;j<b;j++){
+            if (array[i][j] === '-'){
+                array[i][j] = '_'
+            }
+        }
+    }
+    document.write('Mảng sau khi sửa là: '+array);
+    console.log(array);
+</script>

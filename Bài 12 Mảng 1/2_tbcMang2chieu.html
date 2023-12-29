@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+
+    let a =parseInt( prompt('nhập vào số phần tử i trong mảng 2 chiều'));
+    let b =parseInt( prompt('nhập vào số phần tử j trong mảng 2 chiều'));
+    let tong =0;
+    let arr = [];
+    for (let i=0; i<a;i++){
+        arr[i] = new Array(b);
+        for (let j=0;j<b;j++){
+            arr[i][j] =parseInt( prompt('Mời nhập phần tử mảng array['+i+']['+j+']: '));
+            tong += arr[i][j]
+        }
+    }
+    let tbc = tong/(a*b)
+    document.write('mảng = '+ arr+'<br>');
+    document.write('tổng = '+ tong+'<br>');
+    document.write('tbc = '+ tbc);
+</script>

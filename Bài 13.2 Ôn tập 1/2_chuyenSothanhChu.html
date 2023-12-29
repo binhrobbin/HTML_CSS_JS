@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    // let doc='';
+    // let luy = ['','mươi','trăm','nghìn','mươi','trăm','triệu','mươi','trăm','tỉ','mươi','trăm','nghìn']
+    // let a = prompt('nhập 1 số dương bất kỳ');
+    // let so = [1,2,3,4,5,6,7,8,9,0]
+    // let i,k;
+    // let chu = ['một','hai','ba','bốn','năm','sáu','bẩy','tám','chín','không']
+    // for (i=0,k=a.length-1;i<a.length;i++,k--){
+    //     if ((i==a.length-2 && a[a.length-2] == 1 && a.length>1) || (i==a.length-5 && a[a.length-5] == 1 && a.length>4)
+    //     || (i==a.length-8 && a[a.length-8] == 1 && a.length>7) || (i==a.length-11 && a[a.length-11] == 1 && a.length>10)) {
+    //                 doc += 'mười' + '&nbsp'
+    //     }
+    //     else {
+    //         for (let j = 0; j < 10; j++) {
+    //             if (parseInt(a[i]) === so[j])
+    //                 doc += chu[j] + '&nbsp'
+    //         }
+    //         doc += luy[k] + '&nbsp'
+    //     }
+    // }document.write('số ban đầu là: '+a+'<br>');
+    // document.write(doc);
+
+    let doc='';
+    let luy = ['','mươi','trăm','nghìn','mươi','trăm','triệu','mươi','trăm','tỉ','mươi','trăm','nghìn']
+    let a = prompt('nhập 1 số dương bất kỳ');
+    let so = [1,2,3,4,5,6,7,8,9,0]
+    let i,k;
+    let chu = ['một','hai','ba','bốn','năm','sáu','bẩy','tám','chín','không']
+    for (i=0,k=a.length-1;i<a.length;i++,k--){
+        if ( (k-1)%3 === 0 && a[k] === '1') {
+            doc += 'mười' + '&nbsp'
+        }
+        if (a[k] === '0') {
+             doc += 'linh' + '&nbsp'
+        }
+        else {
+            for (let j = 0; j < 10; j++) {
+                if (parseInt(a[i]) === so[j])
+                    doc += chu[j] + '&nbsp'
+            }
+            doc += luy[k] + '&nbsp'
+        }
+    }document.write('số ban đầu là: '+a+'<br>');
+    document.write(doc);
+
+    // let doc='';
+    // let luy = ['','mươi','trăm','nghìn','mươi','trăm','triệu','mươi','trăm','tỉ','mươi','trăm','nghìn']
+    // let a = prompt('nhập 1 số dương bất kỳ');
+    // let so = [1,2,3,4,5,6,7,8,9,0]
+    // let i,k;
+    // let chu = ['một','hai','ba','bốn','năm','sáu','bẩy','tám','chín','không']
+    // for (i=0,k=a.length-1;i<a.length;i++,k--){
+    //     if ((k-1)%3 === 0)
+    //     {
+    //         if (a[k] === '1') {
+    //             doc += 'mười' + '&nbsp'
+    //         }
+    //         if (a[k] === '0') {
+    //             doc += 'linh' + '&nbsp'
+    //         }
+    //     }
+    //     else if (((k-1)%3 === 0) && ((k-2)%3 === 0) && (a[k] === '0')){
+    //
+    //     }
+    //         else{
+    //         for (let j = 0; j < 10; j++) {
+    //             if (parseInt(a[i]) === so[j])
+    //                 doc += chu[j] + '&nbsp'
+    //         }
+    //         doc += luy[k] + '&nbsp'
+    //     }
+    // }document.write('số ban đầu là: '+a+'<br>');
+    // document.write(doc);
+</script>

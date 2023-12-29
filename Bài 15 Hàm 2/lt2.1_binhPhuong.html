@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Bình phương của <input id="1" oninput="tinh()"> là: <span id="2"></span>
+<!--Bình phương của <input id="1" onchange="tinh()"> là: <span id="2"></span>-->
+
+</body>
+</html>
+<script>
+    function binhphuong(number){
+        let result = number*number;
+        return result;
+    }
+    function tinh(){
+        let a = document.getElementById('1').value;
+        let b = binhphuong(a);
+        document.getElementById('2').innerHTML= b;
+    }
+</script>

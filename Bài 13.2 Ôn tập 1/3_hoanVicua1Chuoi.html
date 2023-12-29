@@ -1,0 +1,53 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Title</title>-->
+<!--</head>-->
+<!--<body>-->
+
+<!--</body>-->
+<!--</html>-->
+<!--<script>-->
+<!--    let a = prompt('Mời nhập một chuỗi');-->
+<!--    document.write('chuỗi ban đầu là: '+a+'<br>');-->
+<!--    for (let i=0;i<a.length;i++){-->
+
+<!--    }-->
+<!--</script>-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let c =prompt('nhập 1 số dương bất kỳ');
+    let a=c;
+    let b=0;
+    let j=0;
+    let dem =0;
+    // alert(a.length)
+    for (let i=0;i<40;i++){
+        if (parseInt(a) === 1) {
+            document.write(c+' là số happy');
+            dem++;
+            break;
+        }
+
+        else {
+            for (j = 0; j < a.length; j++) {
+                b += Math.pow(parseInt(a[j]), 2)
+            }
+            a = b.toString();
+            b = 0;
+            document.write(a + '<br>')
+        }
+    }
+    if (dem ===0) document.write(c+' KO là số happy')
+</script>
