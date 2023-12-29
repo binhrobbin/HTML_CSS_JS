@@ -9,6 +9,15 @@
 </body>
 </html>
 <script>
-    let a = prompt('mời nhập vào')
-    function kiemtra
+    let a = prompt('mời nhập một ký tự')
+
+    alert( kiemtra(a));
+    function kiemtra(kytu){
+        let c;
+        let b = parseInt(kytu);
+        if (!isNaN(b)){
+            c = true;
+        }else c = false;
+        return c;
+    }
 </script>
