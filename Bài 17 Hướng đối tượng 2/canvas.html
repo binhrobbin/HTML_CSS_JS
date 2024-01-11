@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div align="center">
+<canvas id="myCanvas" width="500" height="500" style="border: 1px solid cornflowerblue">
+    Your browser does not  support the HTML canvas tag.
+</canvas>
+</div>
+<script>
+    let c = document.getElementById('myCanvas');
+    let ctx = c.getContext('2d');
+    function draw(x,y){
+        if (x === 0 && y === 0)
+        {
+            speedX = 0;
+            speedY = 5;
+        }
+        if (x === 0 && y === 450)
+        {
+            speedX = 5;
+            speedY = 0;
+        }
+       if (x === 450 && y === 450)
+        {
+            speedX = 0;
+            speedY = -5;
+        }
+       if (x === 450 && y ===0)
+        {
+            speedX = -5;
+            speedY = 0;
+        }
+
+        ctx.fillRect(x,y,50,50);
+    }
+    function clear(){
+        ctx.clearRect(0,0,500,500)
+    }
+    let x=0;
+    let y=0;
+    let speedX = 5;
+    let speedY = 5;
+    function start(){
+        // console.log(1);
+        clear();
+        draw(x,y);
+        x += speedX;
+        y += speedY;
+    }
+    setInterval(start,60)
+</script>
+</body>
+</html>

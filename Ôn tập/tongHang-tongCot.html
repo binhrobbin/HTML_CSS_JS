@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    // for (let i=1;i<=100;i++){
+    //     if (i%5 !== 0) console.log(i)
+    // }
+    // let arr = [1,2,3];
+    // arr.push(5) // 1,2,3,5
+    // arr.unshift(0) // 0,1,2,3
+    // arr.pop() // 1,2
+    // arr.shift() // 2,3
+
+    let matrix = [
+        [1,2,3],
+        [4,5,6],
+        [7,8,9]
+    ]
+
+    // for (let i=0;i<matrix.length;i++){
+    //     tong =0;
+    //     for (let j=0;j<matrix[i].length;j++){
+    //         tong +=matrix[i][j];
+    //     }
+    //     console.log('Tổng hàng ' + (i+1)+ ' là '+tong)
+    // }
+
+
+    for (let i=0;i<matrix.length;i++){
+        tong =0;
+        for (let j=0;j<matrix.length;j++){
+            tong +=matrix[j][i];
+        }
+        console.log('Tổng cột ' + (i+1)+ ' là '+tong)
+    }
+</script>

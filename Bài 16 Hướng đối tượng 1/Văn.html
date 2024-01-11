@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Account Manage</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let userNameList=[]
+    let passwordList=[]
+    class Account {
+        username;
+        password;
+        phone;
+        role;
+        avatar;
+
+        constructor(username, password) {
+            this.username = username;
+            this.password = password;
+            /*this.phone = phone;
+            this.role = role;
+            this.avatar = avatar;*/
+            this.changePassword = function (newpassword) {
+                if (newpassword === this.password) {
+                    alert("Password was used, Try again")
+                } else {
+                    this.password = newpassword
+                }
+            }
+            this.searchUsername = function (name) {
+                if (name === this.username){
+                    alert("This username has been used")
+                }else{
+                    alert("This username is ok")
+                }
+            }
+            this.deleteAccount = function (){
+                // this.username = ''
+                // this.password =''
+                this.phone =''
+                this.role = ''
+                this.avatar =''
+            }
+            this.createAccount = function (){
+                for(let i = 0; i <= userNameList.length; i++) {
+                    if (this.username === userNameList[i] || this.password === passwordList[i]) {
+                        alert("Username has been used please,choose an orther username")
+                        break
+                    } else {
+                        // this.username = username
+                        // this.password = password
+                        userNameList.push(this.username)
+                        passwordList.push(this.password)
+                        break
+                    }
+                }
+            }
+            this.login = function (username,password){
+                for(let i = 0; i < userNameList.length; i++) {
+                    if (username === userNameList[i] && password === passwordList[i]) {
+                        alert("Login success")
+                    } else {
+                        alert("Username or password is wrong, check it please")
+                    }
+                }
+            }
+        }
+    }
+    let user1 = new Account('abc','123')
+    user1.createAccount();
+    // console.log(user1.username,user1.password)
+    console.log(userNameList,passwordList)
+
+</script>

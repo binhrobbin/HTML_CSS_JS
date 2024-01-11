@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    function breakingRecords(scores) {
+        let arr =[];
+        let a=0,b=0;
+        let max = scores[0];
+        let min = scores[0];
+        for (let i=1;i<scores.length;i++) {
+            if (scores[i] < min) {
+                b++;
+                min = scores[i];
+            }else if (scores[i] > max) {
+                a++;
+                max = scores[i];
+            }
+
+        }
+        arr.push(a,b);
+        return arr;
+    }
+   alert( breakingRecords([10, 5, 20, 20, 4, 5, 2, 25, 1]))
+</script>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    editAccount() {
+        const username = prompt("Enter the username of your account");
+        const accountIndex = this.accounts.findIndex(account => account.username === username);
+
+        if (accountIndex !== -1) {
+            const editedAccount {
+                username:prompt("Enter new username") || this.accounts[accountIndex].username,
+                    password:prompt("Enter new password") || this.accounts[accountIndex].password,
+                    phone: prompt("Enter new phone number") || this.account[accountIndex].phone;
+                avatar:prompt("Enter your new avatar url") || this.account[accountIndex].avatar;
+
+            };
+
+            this.accounts[accountIndex] = editedAccount;
+            console.log("Account edited successfully");
+        }
+        else {
+            console.log("Cannot find your account")
+        }
+    }
+
+    changePassword() {
+        const username = prompt("Enter your username:");
+        const account = this.findAccountByUsername(username);
+
+
+        if (account) {
+            const newPassword = prompt("Enter new password:");
+            account.password = newPassword;
+            console.log("Your password changed successfully");
+        }
+
+        else {
+            console.log("Account not found");
+        }
+
+    }
+
+    deleteAccount() {
+        const username = prompt ("Enter your username:");
+        const index  = this.accounts.findIndex( account => account.username === username)
+
+        if (index !== -1) {
+
+            this.accounts.splice(index, 1);
+            console.log("Delete successfully");
+        }
+
+        else {
+            console.log("Account is not found");
+        }
+    }
+
+    generateId(){
+        return Math.floor(Math.random() * 1000);
+
+    }
+    findAccountByUsername(username) {
+        return this.accounts.find(account => account.username === username);
+    }
+
+
+    }
+
+    const accountManagement = new AccountManagement();
+
+
+    accountManagement.addAccount();
+    accountManagement.editAccount();
+    accountManagement.changePassword();
+    accountManagement.deleteAccount();
+</script>

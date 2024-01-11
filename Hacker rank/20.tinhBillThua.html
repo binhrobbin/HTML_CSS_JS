@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    function bonAppetit(bill, k, b) {
+        let tong = 0;
+        for (let i=0;i<bill.length;i++){
+            if (i===k) {continue}
+            tong +=bill[i];
+        }
+        let changeCome = tong/2;
+        // alert(k)
+        if (changeCome === b) return console.log( 'Bon Appetit');
+        else return console.log(b- changeCome)
+    }
+    (bonAppetit([3, 10, 2, 9],1,12))
+</script>

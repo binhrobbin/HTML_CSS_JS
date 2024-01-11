@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        th:nth-child(1){
+            text-align: left;
+        }
+        th:nth-child(2){
+            text-align: right;
+            color: red;
+        }
+        button{
+            color: white;
+            background-color:limegreen;
+            border-radius: 3px;
+            border: none;
+        }
+        tr:nth-child(even){
+            background-color: whitesmoke;
+        }
+        fieldset{
+            border: none;
+            width: 220px;
+            background-color: whitesmoke;
+        }
+        td{
+            padding: 5px;
+        }
+        td:nth-child(2){
+            width: 200px;
+        }
+        td:nth-child(4){
+            text-align: center;
+            width: 55px;
+        }
+        img{
+            width: 200px;
+            height: 200px;
+        }
+        div{
+
+        }
+    </style>
+
+</head>
+<body>
+<div align="center">
+<h2>Add New Product</h2>
+<fieldset>
+    <input id="add" placeholder="New Object"> <button onclick="themSp()">Add</button>
+</fieldset>
+<h2>Display All Product</h2>
+
+<span id="2"></span>
+</div>
+</body>
+</html>
+<script>
+class Product {
+    name;
+    img;
+    price;
+    constructor(name,img,price) {
+        this.name = name;
+        this.img = img;
+        this.price = price;
+    }
+}
+let nyBinh = new Product('ny Công','https://gamek.mediacdn.vn/133514250583805952/2022/1/5/photo-1-1641372323926913067415.jpg','500')
+let nyToan = new Product('ny Toan','https://pbs.twimg.com/media/F4ST7VZaEAABXBR?format=jpg&name=large','700')
+let nyLoc = new Product('ny Binh','https://blogreviewsaz.com/wp-content/uploads/2023/07/VSBG-7.jpg','800')
+
+    let product = [nyBinh,nyToan,nyLoc];
+    hienthi();
+
+    function hienthi(){
+        let bang = '';
+        bang = '<table><tr><th colspan="3">Product Name</th><th colspan="3">'+product.length+' products</th></tr>';
+        for (let i=0;i<product.length;i++){
+            bang += '<tr>';
+            bang += '<td>'+(i+1)+'</td>';
+            bang += '<td>'+product[i].name+'</td>';
+            bang += '<td><img src="'+product[i].img+'"></td>';
+            bang += '<td>'+product[i].price+'</td>';
+            bang += '<td><button onclick="suaten('+i+')">Edit</button></td>';
+            bang += '<td><button onclick="xoasp('+i+')">Delete</button></td>';
+            bang += '</tr>';
+        }
+        bang += '</table>';
+        document.getElementById('2').innerHTML = bang;
+    }
+    function themSp() {
+        let tenmoi = prompt('nhập tên sp');
+        let anhmoi = prompt('nhập anh moi');
+        let giamoi = prompt('nhập giá mới');
+        let object2 = document.getElementById('add').value;
+        object2 = new Product(tenmoi,anhmoi,giamoi)
+            product.push(object2);
+            alert('Bạn vừa thêm sản phẩm (' + object2 + ') vào danh sách')
+            hienthi()
+    }
+
+    function suaten(index){
+        let bang = '';
+        bang = '<table><tr><th colspan="3">Product Name</th><th colspan="3">'+product.length+' products</th></tr>';
+        for (let i=0;i<product.length;i++) {
+            if (i === index) {
+                bang += '<tr>';
+                bang += '<td>' + (i + 1) + '</td>';
+                bang += '<td><input id="suaten" value="'+product[i].name+'"></td>';
+                bang += '<td><input id="suaanh" placeholder="link ảnh"></td>';
+                bang += '<td><input id="suagia" value="'+product[i].price+'"></td>';
+                bang += '<td><button onclick="suaten2(' + i + ')">OK</button></td>';
+                bang += '<td><button onclick="hienthi()">Cancel</button></td>';
+                bang += '</tr>';
+            }
+            else {
+                bang += '<tr>';
+                bang += '<td>'+(i+1)+'</td>';
+                bang += '<td>'+product[i].name+'</td>';
+                bang += '<td><img src="'+product[i].img+'"></td>';
+                bang += '<td>'+product[i].price+'</td>';
+                bang += '<td><button onclick="suaten('+i+')">Edit</button></td>';
+                bang += '<td><button onclick="xoasp('+i+')">Delete</button></td>';
+                bang += '</tr>';
+            }
+        }
+        bang += '</table>';
+        document.getElementById('2').innerHTML = bang;
+    }
+    function suaten2(index){
+        let suaten = document.getElementById('suaten').value;
+        let suaanh = document.getElementById('suaanh').value;
+        let suagia = document.getElementById('suagia').value;
+        let suaOj = new Product(suaten,suaanh,suagia)
+        alert('Bạn vừa sửa sản phẩm ('+product[index]+') thành ('+suaOj)
+        product[index] = suaOj;
+        hienthi()
+    }
+    function xoasp(index){
+        let xn = confirm('Bạn có chắc chắn muốn xóa sản phẩm ('+product[index]+') khỏi danh sách')
+        if (xn === true) {
+            product.splice(index, 1);
+            hienthi()
+        }
+    }
+
+
+</script>
+

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        th:nth-child(1){
+            text-align: left;
+        }
+        th:nth-child(2){
+            text-align: right;
+            color: red;
+        }
+        button{
+            color: white;
+            background-color:limegreen;
+            border-radius: 3px;
+            border: none;
+        }
+        tr:nth-child(even){
+            background-color: whitesmoke;
+        }
+        fieldset{
+            border: none;
+            width: 220px;
+            background-color: whitesmoke;
+        }
+        td{
+            padding: 5px;
+        }
+        td:nth-child(2){
+            width: 200px;
+        }
+        td:nth-child(4){
+            text-align: center;
+            width: 55px;
+        }
+    </style>
+
+</head>
+<body>
+<h2>Add New Product</h2>
+<fieldset>
+    <input id="add" placeholder="New Product"> <button onclick="themSp()">Add</button>
+</fieldset>
+<h2>Display All Product</h2>
+<span id="2"></span>
+</body>
+</html>
+<script>
+    let DsSanPham = ['Sony Xperia','Samsung Galaxy','Nokia 6','Xiaomi Mi 5s Plus',
+        'Xiaomi Redmi Note 4','Apple Iphone 6s','Apple Iphone 8 Plus','Fujitsu F-04E','Oppo A71']
+    hienthi();
+
+function hienthi(){
+    let bang = '';
+    bang = '<table><tr><th colspan="2">Product Name</th><th colspan="2">'+DsSanPham.length+' products</th></tr>';
+for (let i=0;i<DsSanPham.length;i++){
+    bang += '<tr>';
+    bang += '<td>'+(i+1)+'</td>';
+    bang += '<td>'+DsSanPham[i]+'</td>';
+    bang += '<td><button onclick="suaten('+i+')">Edit</button></td>';
+    bang += '<td><button onclick="xoasp('+i+')">Delete</button></td>';
+    bang += '</tr>';
+}
+    bang += '</table>';
+    document.getElementById('2').innerHTML = bang;
+}
+function themSp() {
+    let tenmoi = document.getElementById('add').value;
+    if (tenmoi !== '') {
+        DsSanPham.push(tenmoi);
+        alert('Bạn vừa thêm sản phẩm (' + tenmoi + ') vào danh sách')
+        hienthi()
+    }else alert('Không được thêm sản phẩm trống')
+    }
+function suaten(index){
+    let bang = '';
+    bang = '<table><tr><th colspan="2">Product Name</th><th colspan="2">'+DsSanPham.length+' products</th></tr>';
+    for (let i=0;i<DsSanPham.length;i++) {
+        if (i === index) {
+            bang += '<tr>';
+            bang += '<td>' + (i + 1) + '</td>';
+            bang += '<td><input id="sua" value="'+DsSanPham[i]+'"></td>';
+            bang += '<td><button onclick="suaten2(' + i + ')">OK</button></td>';
+            bang += '<td><button onclick="hienthi()">Cancel</button></td>';
+            bang += '</tr>';
+        }
+        else {
+            bang += '<tr>';
+            bang += '<td>'+(i+1)+'</td>';
+            bang += '<td>'+DsSanPham[i]+'</td>';
+            bang += '<td><button onclick="suaten('+i+')">Edit</button></td>';
+            bang += '<td><button onclick="xoasp('+i+')">Delete</button></td>';
+            bang += '</tr>';
+        }
+    }
+    bang += '</table>';
+    document.getElementById('2').innerHTML = bang;
+}
+function suaten2(index){
+    let sua = document.getElementById('sua').value;
+    alert('Bạn vừa sửa sản phẩm ('+DsSanPham[index]+') thành ('+sua)
+    DsSanPham[index] = sua;
+    hienthi()
+}
+function xoasp(index){
+    let xn = confirm('Bạn có chắc chắn muốn xóa sản phẩm ('+DsSanPham[index]+') khỏi danh sách')
+    if (xn === true) {
+        DsSanPham.splice(index, 1);
+        hienthi()
+    }
+}
+
+
+</script>

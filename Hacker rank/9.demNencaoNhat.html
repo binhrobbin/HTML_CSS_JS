@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    function birthdayCakeCandles(candles) {
+        let max = candles[0];
+        let count =0;
+        for (let a in candles){
+            if (max<candles[a]) max = candles[a];
+        }
+        for (let a in candles){
+            if (max === candles[a]) count++;
+        }
+        console.log(count);
+    }
+    let arr = [3, 2, 1, 3]
+    birthdayCakeCandles(arr)
+</script>

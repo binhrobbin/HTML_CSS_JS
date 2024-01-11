@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    function gradingStudents(grades) {
+        let arr=[];
+        for (let i=0;i<grades.length;i++){
+            if (grades[i]<38) arr.push(grades[i])
+            else switch (grades[i]%5){
+                case 1:
+                case 2:
+                    arr.push(grades[i]);
+                    break;
+                case 3:
+                    arr.push(grades[i] = grades[i]+2);
+                    break;
+                case 4:
+                    arr.push(grades[i] = grades[i]+1);
+                    break;
+                case 0:
+                    arr.push(grades[i])
+            }
+        }
+        return arr;
+    }
+    let a = [73,78,38,33,80,5]
+    document.write( gradingStudents(a))
+    // else if (grades[i]%5 === 1 || grades[i]%5 === 2) arr.push(grades[i])
+    //     else  if (grades[i]%5 === 3) {
+    //             grades[i] = grades[i]+2
+</script>

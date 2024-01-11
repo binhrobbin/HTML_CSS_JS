@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let arr = [6,1,3,4,2,2,2,5,2,2,3,7,8,8,8,8,8,5]
+    document.write(arr +'<br>')
+    //lọc trùng
+    for (let i=0;i<arr.length;i++){
+        for (let j =i+1;j<arr.length;j++){
+            if (arr[i] === arr[j]) {
+                arr.splice(j, 1);
+                j--;
+            }
+        }
+    }
+    document.write(arr+'<br>')
+    6,1,3,4,2,5,7,8
+    //đảo vị trí
+    for (let i=0; i<3;i++){
+        for (let j=0; j<arr.length-1;j++)
+        if (arr[j]>arr[j+1]){
+            let temp = arr[j];
+            arr[j] = arr[j+1];
+            arr[j+1] = temp;
+        }
+    }
+    if (arr.length >=3)
+    document.write('số cần tìm là '+arr[arr.length -3]);
+    else document.write('mảng không có số lớn thứ 3 ')
+</script>

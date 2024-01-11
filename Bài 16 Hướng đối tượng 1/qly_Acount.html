@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        td{
+            width: 150px;
+            height: 100px;
+            padding-left: 30px;
+        }
+        img{
+            width: 100px;
+            height: 100px;
+        }
+        table{
+            border: 1px solid black;
+        }
+        tr:nth-child(even){
+            background-color: whitesmoke;
+        }
+    </style>
+
+</head>
+<body>
+
+<div align="center">
+    <h1>Quản lý tài khoản</h1>
+    <input id="search" oninput="timkiem()" placeholder="nhap username" style="width: 200px;height: 50px">
+<table>
+    <tr style="background-color: cornflowerblue">
+        <td>id</td>
+        <td>username</td>
+        <td>password</td>
+        <td>avatar</td>
+        <td>role</td>
+        <td>sửa</td>
+        <td>xóa</td>
+    </tr>
+<tbody id="display">
+</tbody>
+</table>
+</div>
+
+</body>
+</html>
+<script src="qly_Acount.js"></script>

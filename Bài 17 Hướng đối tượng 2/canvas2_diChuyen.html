@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div align="center">
+    <canvas id="myCanvas" width="500" height="500" style="border: 1px solid cornflowerblue">
+        Your browser does not  support the HTML canvas tag.
+    </canvas>
+</div>
+<script>
+    let c = document.getElementById('myCanvas');
+    let ctx = c.getContext('2d');
+    function draw(x,y){
+        ctx.fillRect(x,y,50,50);
+    }
+    draw(0,0)
+    function clear(){
+        ctx.clearRect(0,0,500,500)
+    }
+    let x=0;
+    let y=0;
+    function turn(evt) {
+        switch (evt.keyCode) {
+            case 37:
+                clear();
+                x -= 10;
+                draw(x, y);
+                break;
+            case 38:
+                clear();
+                y -= 10;
+                draw(x, y);
+                break;
+            case 39:
+                clear();
+                x += 10;
+                draw(x, y);
+                break;
+            case 40:
+                clear();
+                y += 10;
+                draw(x, y);
+                break;
+        }
+    }
+    window.addEventListener("keydown", turn);
+</script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    class Mobile {
+        name;
+        status;
+        pin;
+        statusPin = 'off';
+        message;
+        inbox;
+        send;
+        constructor(name,pin,status,message,inbox,send) {
+            this.name = name;
+            this.pin = pin;
+            this.status = status;
+            this.message = message;
+            this.inbox = inbox;
+            this.send = send;
+            this.checkStatus = function () {
+                return this.status
+            }
+            this.onOff = function (){
+                if (this.status === 'on'){
+                    this.status = 'off'
+                }else this.status = 'on'
+            }
+        }
+        charge(){
+            alert("pin: "+ this.pin+'%')
+            this.pin = this.pin+1;
+        }
+        chargeOnOff(){
+            if (this.statusPin === 'off'){
+                this.statusPin = 'on';
+                alert('Bạn đang sạc pin cho dt ')
+                set = setInterval(chargeIP,3000)
+            }
+            else {
+                this.statusPin = 'off';
+                alert('Bạn tắt sạc pin cho: '+ a)
+                clearInterval(set)
+            }
+        }
+    }
+    let set;
+    let iphone = new Mobile('X',10,'on','aa','ib','send');
+    iphone.chargeOnOff()
+    function chargeIP() {
+        iphone.charge()
+    }
+</script>

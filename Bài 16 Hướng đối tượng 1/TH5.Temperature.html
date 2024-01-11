@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    function Temperature (doC){
+        this.doC = doC;
+        this.cF = function (){
+            return 9/5*this.doC+32
+        }
+        this.cK = function (){
+            return this.doC+273.15
+        }
+    }
+    let nhietdo = new Temperature(25)
+    document.write('Độ F là: '+ nhietdo.cF()+'<br>'+
+        'Độ K là: '+nhietdo.cK())
+</script>

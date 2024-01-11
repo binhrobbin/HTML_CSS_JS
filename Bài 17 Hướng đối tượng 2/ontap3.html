@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let a = 'abc'
+    let b = 'adnfnabcsab dabc'
+    let dem =0
+    if (a.length<b.length){
+        for (let i=0; i<b.length;i++){
+            if (b[i] === a[0]){
+                let count = 1;
+                for (let j=1; j<a.length;j++){
+                    if (b[i+j] === a[j]){
+                        count++;
+                    }else break;
+                }
+                if (count === a.length) {
+                    document.write(' a có nằm trong chuỗi b'+'<br>')
+                    dem++;
+                }
+            }
+        }
+        if (dem !== 0) document.write('chuỗi a xuất hiện '+dem+' lần trong chuỗi b')
+    }else document.write('a không nằm trong chuoi b')
+</script>

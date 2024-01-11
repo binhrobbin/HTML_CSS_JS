@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="1"></p>
+</body>
+</html>
+<script>
+    // Bài 9: Viết hàm truyền vào một mảng ký tự, và một ký tự bất kỳ, kiểm tra xem ký tự bất kỳ đó có nằm trong mảng không.
+    // Nếu có trả về số lần xuất hiện của ký tự đó, nếu không trả về -1.
+    let arr =[];
+    let dem =0;
+    let b =prompt('mời nhập ký tự cần tìm');
+    document.write(b+'<br>')
+    function mang(){
+        let a =parseInt(prompt('mời nhập số lượng pần tử của mảng'));
+        for (let i=0;i<a;i++){
+            arr[i] = prompt('nhập ký tự phần tử thứ '+ i)
+            if (arr[i] === arguments[0]) dem++
+        }
+        document.write(arr+'<br>')
+        if (dem === 0) return ('return: '+-1);
+        else return ('Số lần xuất hiện của '+arguments[0]+' trong mảng là '+dem+' lần');
+    }
+
+    document.write(mang(b))
+
+</script>

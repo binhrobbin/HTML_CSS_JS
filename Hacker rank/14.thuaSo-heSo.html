@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    function getTotalX(a, b) {
+        let c =[]
+        let count = 0;
+        for (let i=a[a.length-1];i<=b[0];i++){
+            let dem =0;
+            for (let j in a){
+                if (i%a[j] !== 0) dem++;
+            }
+            if (dem === 0) c.push(i)
+        }
+        // alert(c)
+        for (let i in c){
+            let dem =0;
+            for (let j in b){
+                if (b[j]%c[i] !== 0) dem++
+            }
+            if (dem === 0) count++;
+        }
+        return count;
+    }
+    alert( getTotalX([2,4],[16,32,96]));
+</script>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let arr1= [3, 5, 1, 8, -3, 7, 8];
+    let arr2= [7, 12, 6, 9, 20, 56, 89];
+    let arr3= [];
+    let arr4= [0, 0, 0, 0, 0, 0];
+    function timMin(arr){
+        let min =arr[0];
+        document.write('Mảng của bạn nhập vào là '+arr+'<br/>');
+        if (arr.length===0) document.write('Mảng của bạn trống rỗng ko có giá trị Min'+'<br>')
+        else {for (let a in arr){
+            if (arr[a]<min) min = arr[a];
+        }
+        return min;}
+    }
+    document.write('min của mảng 1 là: '+timMin(arr1)+'<br>')
+    document.write('min của mảng 2 là: '+timMin(arr2)+'<br>')
+    document.write('min của mảng 3 là: '+timMin(arr3)+'<br>')
+    document.write('min của mảng 4 là: '+timMin(arr4)+'<br>')
+</script>

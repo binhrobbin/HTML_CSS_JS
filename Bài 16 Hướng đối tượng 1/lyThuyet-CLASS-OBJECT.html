@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+//Tạo CLASS cách 1 (dùng class JAVA):
+    class Student1 {
+        id;
+        name;
+        hair;
+        constructor(id,name) {
+            this.name = name;
+            this.id = id
+            this.hair = 'black'
+            this.getInforT1 = function () {
+                return `Id= ${this.id} name= ${this.name} toc= ${this.hair}`
+            }
+            this.getInforN1 = getInforNgoai1;
+        }
+    }
+    function getInforNgoai1(){
+        return `Id= ${this.id} name= ${this.name} toc= ${this.hair}`;
+    }
+
+//---tạo đối tượng khi có CLASS cách 1:
+    let OjA1 = new Student1(111,'Nguyễn A')
+    let OjB1 = new Student1(222,'Nguyễn B')
+    let arrOj1 = [OjA1,OjB1]
+    console.log(arrOj1[1].getInforT1())
+    console.log(OjA1.getInforN1())
+    console.log(arrOj1[1].getInforN1())
+
+//Tạo CLASS cách 2 (dùng hàm trực tiếp):
+    function Student2(id,name){
+        this.name = name;
+        this.id = id
+        this.hair = 'black'
+        this.getInforT = function () {
+            return `Id= ${this.id} name= ${this.name} toc= ${this.hair}`
+        }
+        this.getInforN = getInforNgoai;
+    }
+    function getInforNgoai(){
+        return `Id= ${this.id} name= ${this.name} toc= ${this.hair}`;
+    }
+
+//---tạo đối tượng khi có CLASS cách 1;
+    let OjA2 = new Student2(111,'Nguyễn A')
+    let OjB2 = new Student2(222,'Nguyễn B')
+    let arrOj2 = [OjA2,OjB2]
+    console.log(arrOj2[1].getInforT())
+    console.log(OjA2.getInforN())
+    console.log(arrOj2[1].getInforN())
+
+//---tạo Đối tượng cách 2: riêng lẻ (sd Object literals):
+    let student = {
+        //Sub-namespaces (không gian tên phụ)
+        id: {
+            hs: [333, 444],
+            gv: 'g111'
+        },
+        name: ['Nguyễn C', 'Nguyễn D', 'Nguyễn E'],
+        hair: 'black',
+        getInforT3: function () {
+            return `Id= ${this.id.hs[1]} name= ${this.name[2]} toc= ${this.hair}`;
+        },
+        getInforN3: getInforNgoai3
+    }
+        function getInforNgoai3() {
+            return `Id= ${this.id.gv} name= ${this.name[1]} toc= ${this.hair}`;
+        }
+        student.hair = 'red'
+    // Thêm thuộc tính mới trong Oj
+        student.skill = 'sex'
+        alert(student.skill)
+    // Thêm hàm (phương thức) mới trong Oj
+        student.chao = function (){alert('hello')};
+        student.chao()
+        console.log(student.getInforT3())
+        console.log(student.getInforN3())
+        console.log(student[`id`][`hs`][1]) //444
+
+//---tạo Đối tượng riêng lẻ cách 3 (Singleton sd 1 hàm): ít được sd
+let apple = new function() {
+    this.type = "macintosh";
+    this.color = "red";
+    this.getInfo = function () {
+        return this.color + ' ' + this.type + ' apple';
+    };
+}
+apple.color = "reddish";
+alert(apple.getInfo());
+</script>

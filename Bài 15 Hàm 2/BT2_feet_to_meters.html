@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let a = confirm('Bạn muốn chuyển đổi Feet sang Met thì ấn OK, ngược lại thì ấn CANCEL')
+    if (a === true) {
+        let f =parseFloat( prompt('Mời bạn nhập số Feet cần đổi'));
+        FeetToMet (f);
+    }
+    else {
+        let m =parseFloat( prompt('Mời bạn nhập số Meters cần đổi'));
+        MetToFeet (m);
+    }
+    function MetToFeet(MtF){
+        // meter = 0.305 * foot
+        // foot = 3.279 * meter
+        let Feet = 3.279 * MtF;
+        alert(MtF+' mét đổi thành: '+ Feet+' feet')
+    }
+    function FeetToMet(FtM){
+        let Met = 0.305 * FtM;
+        alert(FtM+' feet đổi thành: '+ Met+' mét')
+    }
+</script>

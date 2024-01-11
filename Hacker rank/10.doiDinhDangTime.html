@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    function timeConversion(s) {
+        // let c = s.slice(-2,-1);
+        // alert(c)
+        // if (c === 'P'){
+        if (s.substr(-2,1) === 'P'){
+            if (s.substring(0,2) === '12'){
+                s = s.slice(0,s.length-2)
+            }else {
+                let a = parseInt(s.slice(0, 2)) + 12;
+                let b = s.slice(2, s.length - 2)
+                // alert(b)
+                s = a + b;
+            }
+        }
+        else if (s.substring(0,2) === '12') s = '00'+s.slice(2, s.length - 2)
+            else s = s.slice(0,s.length-2)
+        return s;
+    }
+    let h = '12:05:45AM'
+   document.write( timeConversion(h))
+</script>

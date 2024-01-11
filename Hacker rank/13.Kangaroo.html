@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+</body>
+</html>
+<script>
+    function kangaroo(x1, v1, x2, v2) {
+        if (x1 === x2){
+            if (v1 === v2) return 'YES'
+            else return 'NO'
+        }
+        else {
+            let a = (x2-x1)/(v1-v2)
+            if (x1>x2){
+                if (v1<v2) {
+                    if (Number.isInteger(a)) return 'YES'
+                    else return 'NO'
+                }
+                else return 'NO'
+            }
+            else if (v1>v2){
+                    if (Number.isInteger(a)) return 'YES'
+                    else return 'NO'
+                }
+                else return 'NO'
+        }
+    }
+   alert( kangaroo(28, 8, 96, 2));
+</script>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    function birthday(s, d, m) {
+        let dem =0;
+        for (let i=0;i<s.length+1-m;i++) {
+            let tong = 0;
+            for (let j = 0; j < m; j++) {
+                tong += s[i + j]
+            }
+            if (tong === d) dem++;
+        }
+        return dem;
+    }
+   alert( birthday([1 ,2 ,1, 3 ,2],3, 2));
+</script>

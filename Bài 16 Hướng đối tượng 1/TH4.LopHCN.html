@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1 style=""></h1>
+<canvas id="myCanvas" width="2000" height="500" style="background: rebeccapurple;border: 1px solid red"></canvas>
+<p id="n"></p>
+</body>
+</html>
+<script>
+    class Rectangle {
+        width1;
+        height1;
+        constructor(width,height) {
+            this.width1 = width;
+            this.height1 = height;
+            this.dientich = function (){
+                return this.width1*this.height1;
+            }
+            this.chuvi = function (){
+                return (this.width1+this.height1)*2;
+            }
+        }
+    }
+    let hcn = new Rectangle(200,50);
+    hcn.height1 = 500;
+    let  c= document.getElementById('myCanvas');
+    c.width = hcn.width1;
+    c.height = hcn.height1;
+    c.style.background = 'red';
+    document.getElementById('n').innerHTML = 'Diện tích là '+ hcn.dientich() +'<br> Chu vi là '+ hcn.chuvi()
+
+</script>

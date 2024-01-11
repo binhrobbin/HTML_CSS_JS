@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        input{
+            height: 150px;
+            width: 410px;
+        }
+        td{
+            text-align: center;
+            width: 100px;
+        }
+        body{
+            font-size: xxx-large;
+        }
+        button {
+            text-align: center;
+            width: 100px;
+            font-size: xxx-large;
+            border-radius: 10px;
+        }
+        input{
+            font-size: xxx-large;
+        }
+    </style>
+</head>
+<body>
+<H1 align="center">Máy tính</H1>
+<table align="center">
+    <tr>
+        <td colspan="4"><input id="display" ></td>
+    </tr>
+    <tr>
+
+        <td><button onclick="nhapdl('(')">(</button></td>
+        <td><button onclick="nhapdl(')')">)</button></td>
+        <td><button type="reset" onclick="reset()" >AC</button> </td>
+        <td><button onclick="xoa()">&#8678;</button></td>
+    </tr>
+    <tr>
+        <td><button onclick="nhapdl(9)">9</button></td>
+        <td><button onclick="nhapdl(8)">8</button></td>
+        <td><button onclick="nhapdl(7)">7</button></td>
+        <td><button onclick="nhapdl('+')">+</button></td>
+    </tr>
+    <tr>
+        <td><button onclick="nhapdl(6)">6</button></td>
+        <td><button onclick="nhapdl(5)">5</button></td>
+        <td><button onclick="nhapdl(4)">4</button></td>
+        <td><button onclick="nhapdl('-')">-</button></td>
+    </tr>
+    <tr>
+        <td><button onclick="nhapdl(3)">3</button></td>
+        <td><button onclick="nhapdl(2)">2</button></td>
+        <td><button onclick="nhapdl(1)">1</button></td>
+        <td><button onclick="nhapdl('*')">*</button></td>
+    </tr>
+    <tr>
+        <td><button onclick="nhapdl(0)">0</button></td>
+        <td><button onclick="nhapdl('.')">.</button></td>
+        <td><button onclick="result('=')">=</button></td>
+        <td><button onclick="nhapdl('/')">/</button></td>
+    </tr>
+</table>
+</body>
+</html>
+<script>
+   let ipdisplay = document.getElementById('display');
+   function nhapdl(char){
+       ipdisplay.value += char
+   }
+   function reset(){
+       ipdisplay.value = '';
+   }
+   function result(){
+       ipdisplay.value = eval(ipdisplay.value)
+   }
+   function xoa(){
+       ipdisplay.value = ipdisplay.value.slice(0,-1)
+   }
+
+</script>

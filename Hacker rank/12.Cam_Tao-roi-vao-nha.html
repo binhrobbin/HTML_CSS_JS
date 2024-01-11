@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    function countApplesAndOranges(s, t, a, b, apples, oranges) {
+        let tao = 0, cam = 0;
+        for (let i in apples) {
+            apples[i] += a;
+            for (let a=s;a <= t;a++) {
+                if (apples[i] === a) {
+                    tao += 1;
+                    break;
+                }
+            }
+        }
+        for (let j in oranges) {
+            oranges[j] += b;
+            for (let a=s;a <= t;a++) {
+                if (oranges[j] === a){
+                    cam += 1;
+                    break;
+                }
+            }
+        }
+
+    console.log(tao)
+    console.log(cam)
+    }
+    countApplesAndOranges(7, 11, 5, 15,[-2,2,1],[5,-6])
+</script>
