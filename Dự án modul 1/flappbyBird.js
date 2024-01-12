@@ -21,6 +21,21 @@ let birdOJ = {
     x: backGround.width/3,
     y: backGround.height/2
 }
+let flapAudio = new Audio("images/Flap.mp3")
+let deadAudio = new Audio("images/Die.m4a")
+let tingAudio = new Audio("images/Ting.mp3")
+let nenAudio = new Audio("images/BirdCath.mp3")
+let isMuted = true;
+document.addEventListener('click',function(){
+    if (isMuted) {
+    isMuted = false
+    nenAudio.volume =1;
+    nenAudio.play()
+    }else {
+        nenAudio.volume = 0;
+        isMuted = true
+    }
+})
 let score = 0;
 let highScore = 0;
 let pipeOJ = [];
@@ -51,6 +66,8 @@ document.addEventListener('keydown',function(){
         score = 0;
         run()
     }else {
+        flapAudio.currentTime = 0.02 //bắt đầu chạy từ 0.02s
+        flapAudio.play();
         speed = -12
         a = 1
         setTimeout(birdSpeed, 140)
@@ -122,6 +139,7 @@ function run(){
             if (pipeOJ[i].x === -pipeTop.width) pipeOJ.splice(0, 1);
             if (pipeOJ[i].x === birdOJ.x) {
                 score++;
+                tingAudio.play();
                 if (score === 10){
                     speed2 = 10}
                 if (score>highScore){highScore= score}
@@ -130,6 +148,7 @@ function run(){
                 birdOJ.x + birdImg.width >= pipeOJ[i].x && birdOJ.x <= pipeOJ[i].x + pipeTop.width
                 && (birdOJ.y <= pipeOJ[i].y + pipeTop.height || birdOJ.y + birdImg.height >= pipeOJ[i].y + spaceToPipeBot)
             ) {
+                deadAudio.play()
                 game = 'ending';
                 count = 0;
                 speed2 = 6
